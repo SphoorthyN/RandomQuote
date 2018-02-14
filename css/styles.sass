@@ -1,0 +1,50 @@
+@import vars.sass
+@import url('https://fonts.googleapis.com/css?family=Oswald:600')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600i')
+
+@mixin border()
+    border: 1px solid black
+
+$defSize : 16
+
+html
+    +wh(100%, 100%)
+    body
+        background: mediumpurple
+        margin: 0
+        padding: 0
+        display: flex
+        size: $defSize
+        align-items: center
+        justify-content: center
+        +wh(100%, 100%)
+        box-sizing: border-box
+        //+border()
+
+        .fade-in
+            opacity: 1
+            transition: 400ms
+
+        .fade-out
+            opacity: 0
+            transition: 500ms
+
+        .box
+            +wh(remFunc(600), remFunc(300))
+            +border()
+            display: flex
+            padding-top: remFunc(40)
+            justify-content: space-between
+            align-items: center
+            flex-direction: column
+            .quote
+                //margin: 0 20px
+                #quote
+                    font-size: remFunc(30)
+                    margin: 0 remFunc(20)
+                    text-align: justify
+                    font-family: "Oswald", sans-serif
+                #author
+                    text-align: right
+                    font-family: "Open Sans", sans-serif
+                    margin-right: remFunc(20)

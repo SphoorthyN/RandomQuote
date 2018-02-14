@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600i");
+html {
+  width: 100%;
+  height: 100%; }
+  html body {
+    background: mediumpurple;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    size: 16;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; }
+    html body .fade-in {
+      opacity: 1;
+      transition: 400ms; }
+    html body .fade-out {
+      opacity: 0;
+      transition: 500ms; }
+    html body .box {
+      width: 37.5rem;
+      height: 18.75rem;
+      border: 1px solid black;
+      display: flex;
+      padding-top: 2.5rem;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column; }
+      html body .box .quote #quote {
+        font-size: 1.875rem;
+        margin: 0 1.25rem;
+        text-align: justify;
+        font-family: "Oswald", sans-serif; }
+      html body .box .quote #author {
+        text-align: right;
+        font-family: "Open Sans", sans-serif;
+        margin-right: 1.25rem; }
+
+/*# sourceMappingURL=styles.css.map */

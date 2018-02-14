@@ -1,0 +1,22 @@
+$defSize : 16
+
+@mixin size($size)
+    height: $size
+    width: $size
+
+//@mixin border()
+//    border: 1px solid black
+
+@mixin wh($width, $height)
+    width: $width
+    height: $height
+
+@mixin clearMP
+    margin: 0
+    padding: 0
+
+//don't use units in the parameter. It defaults to px
+@function remFunc($var, $size: $defSize)
+    @return #{$var/$size}rem
+
+
