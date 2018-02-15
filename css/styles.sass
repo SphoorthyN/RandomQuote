@@ -1,6 +1,9 @@
 @import vars.sass
-@import url('https://fonts.googleapis.com/css?family=Oswald:600')
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600i')
+//@import url('https://fonts.googleapis.com/css?family=Oswald:600')
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:600')
+@import url('https://fonts.googleapis.com/css?family=Kavivanar')
+@import url('https://fonts.googleapis.com/css?family=Forum')
+//@import url('https://fonts.googleapis.com/css?family=Righteous')
 
 @mixin border()
     border: 1px solid black
@@ -14,7 +17,7 @@ html
         margin: 0
         padding: 0
         display: flex
-        size: $defSize
+        size: #{$defSize}px
         align-items: center
         justify-content: center
         +wh(100%, 100%)
@@ -23,28 +26,99 @@ html
 
         .fade-in
             opacity: 1
-            transition: 400ms
+            //width: 100%
+            transition: all 400ms
 
         .fade-out
             opacity: 0
-            transition: 500ms
+            //width: 0
+            transition: all 700ms
+
+        .quote-style
+            padding-top: remFunc(15)
+            padding-bottom: remFunc(15)
+            //padding-bottom: remFunc(30)
+            transition: 700ms
+
+        .white
+            filter: drop-shadow(-8px 8px 5px black)
+
+        .white-press
+            filter: drop-shadow(-2px 2px 1px black)
+
 
         .box
-            +wh(remFunc(600), remFunc(300))
-            +border()
+            //+border()
             display: flex
             padding-top: remFunc(40)
             justify-content: space-between
-            align-items: center
+            //align-items: center
             flex-direction: column
             .quote
-                //margin: 0 20px
+                //+border
+                +wh(remFunc(650), remFunc(200))
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
                 #quote
                     font-size: remFunc(30)
+                    box-sizing: border-box
                     margin: 0 remFunc(20)
-                    text-align: justify
-                    font-family: "Oswald", sans-serif
+                    border-left: remFunc(10) solid
+                    border-right: remFunc(10) solid
+                    border-top-left-radius: remFunc(2500)
+                    border-bottom-right-radius: remFunc(2500)
+                    padding-left: remFunc(30)
+                    padding-right: remFunc(30)
+                    width: fit-content
+                    text-align: center
+                    font-family: "Forum", sans-serif
                 #author
-                    text-align: right
-                    font-family: "Open Sans", sans-serif
-                    margin-right: remFunc(20)
+                    text-align: center
+                    font-family: "Kavivanar", sans-serif
+                    margin-right: remFunc(15)
+            #line
+                display: flex
+                flex-direction: column-reverse
+                align-items: center
+                margin-top: remFunc(15)
+                //+border()
+                justify-content: space-between
+                #button
+                    background-color: green
+                    font-family: "Kavivanar", sans-serif
+                    font-size: remFunc(12)
+                    text-transform: uppercase
+                    border: none
+                    border-radius: 40px 10px 40px 10px
+                    display: block
+                    font-weight: 300
+                    color: hsl(0, 0%, 100%)
+                    width: 40%
+                    padding: 15px 32px
+                    margin-bottom: remFunc(10)
+                    margin-left: auto
+                    margin-right: auto
+                    text-align: center
+                    text-decoration: none
+                    //display: inline-block
+                    //margin: 4px 2px
+                    cursor: pointer
+                    &:hover
+                        text-shadow: 0 0 15px white
+                #tweet
+                    margin-top: remFunc(10)
+                    #tw
+                        +wh(50px,50px)
+                        color: white
+                        &:hover
+                            color: rgb(0, 132, 180)
+                            transition: 600ms
+                #fake
+                    +wh(50px,52px)
+                    visibility: hidden
+
+
+
+

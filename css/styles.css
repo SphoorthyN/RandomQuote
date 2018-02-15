@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:600");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:600i");
+@import url("https://fonts.googleapis.com/css?family=Kavivanar");
+@import url("https://fonts.googleapis.com/css?family=Forum");
 html {
   width: 100%;
   height: 100%; }
@@ -8,7 +8,7 @@ html {
     margin: 0;
     padding: 0;
     display: flex;
-    size: 16;
+    size: 16px;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -16,27 +16,85 @@ html {
     box-sizing: border-box; }
     html body .fade-in {
       opacity: 1;
-      transition: 400ms; }
+      transition: all 400ms; }
     html body .fade-out {
       opacity: 0;
-      transition: 500ms; }
+      transition: all 700ms; }
+    html body .quote-style {
+      padding-top: 0.9375rem;
+      padding-bottom: 0.9375rem;
+      transition: 700ms; }
+    html body .white {
+      filter: drop-shadow(-8px 8px 5px black); }
+    html body .white-press {
+      filter: drop-shadow(-2px 2px 1px black); }
     html body .box {
-      width: 37.5rem;
-      height: 18.75rem;
-      border: 1px solid black;
       display: flex;
       padding-top: 2.5rem;
       justify-content: space-between;
-      align-items: center;
       flex-direction: column; }
-      html body .box .quote #quote {
-        font-size: 1.875rem;
-        margin: 0 1.25rem;
-        text-align: justify;
-        font-family: "Oswald", sans-serif; }
-      html body .box .quote #author {
-        text-align: right;
-        font-family: "Open Sans", sans-serif;
-        margin-right: 1.25rem; }
+      html body .box .quote {
+        width: 40.625rem;
+        height: 12.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        html body .box .quote #quote {
+          font-size: 1.875rem;
+          box-sizing: border-box;
+          margin: 0 1.25rem;
+          border-left: 0.625rem solid;
+          border-right: 0.625rem solid;
+          border-top-left-radius: 156.25rem;
+          border-bottom-right-radius: 156.25rem;
+          padding-left: 1.875rem;
+          padding-right: 1.875rem;
+          width: fit-content;
+          text-align: center;
+          font-family: "Forum", sans-serif; }
+        html body .box .quote #author {
+          text-align: center;
+          font-family: "Kavivanar", sans-serif;
+          margin-right: 0.9375rem; }
+      html body .box #line {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 0.9375rem;
+        justify-content: space-between; }
+        html body .box #line #button {
+          background-color: green;
+          font-family: "Kavivanar", sans-serif;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 40px 10px 40px 10px;
+          display: block;
+          font-weight: 300;
+          color: white;
+          width: 40%;
+          padding: 15px 32px;
+          margin-bottom: 0.625rem;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer; }
+          html body .box #line #button:hover {
+            text-shadow: 0 0 15px white; }
+        html body .box #line #tweet {
+          margin-top: 0.625rem; }
+          html body .box #line #tweet #tw {
+            width: 50px;
+            height: 50px;
+            color: white; }
+            html body .box #line #tweet #tw:hover {
+              color: #0084b4;
+              transition: 600ms; }
+        html body .box #line #fake {
+          width: 50px;
+          height: 52px;
+          visibility: hidden; }
 
 /*# sourceMappingURL=styles.css.map */
